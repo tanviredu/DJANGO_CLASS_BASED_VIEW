@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+		
+
+		<center><h1 class="display-4">School List</h1> </center>
+		<hr>
+				
+		<ul class="container">
+			{%  for school in school_list %}	
+				<li class="lead"> <a href="{% url 'basic_app:schoolDetail' school.id %}">Name : <b>{{school.name}}</b></a> </li>
+				<ul class="jumbotron">
+					<li> princilple : {{school.printciple}}</li>
+					<li> location   : {{school.location}}</li>
+				</ul>
+
+				<hr>
+			{% endfor %}
+
+		</ul>
+
+	
+
+{% endblock %}

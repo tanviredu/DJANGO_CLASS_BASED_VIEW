@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+		
+
+		<center><h1 class="display-4">Student List</h1> </center>
+		<hr>
+				
+		<ul class="container">
+			{%  for student in student_list %}	
+				<li class="lead"> <a href="{% url 'basic_app:studentDetail' student.id %}"> <b>Name : {{student.name}}</b></a></li>
+				<li class="lead"> <a href="{% url 'basic_app:update_student' student.id %}">Update</a></li>
+					
+				<ul class="jumbotron">
+					<li> age : {{student.age}}</li>
+					<li> School   : {{student.school}}</li>
+				</ul>
+
+				<hr>
+			{% endfor %}
+
+		</ul>
+
+	
+
+{% endblock %}

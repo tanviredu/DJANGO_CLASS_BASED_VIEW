@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+		
+
+		<center><h1 class="display-4">School Detail</h1> </center>
+		<hr>
+		<div class="jumbotron">
+			<div class="lead">
+				<b> Name : {{school_detail.name}}</b><br>
+				<hr>
+				<b> Principle : {{school_detail.printciple}}</b>
+				<hr>
+				<b> Address   : {{school_detail.location}}</b> 
+				<hr>
+			</div>
+			<a href="{%  url 'basic_app:delete_student' student_detail.id %}" class="btn btn-danger"> Delete</a>
+			<a href="{%  url 'basic_app:schoolList' %}">Go to the School list</a>
+
+		</div>
+				
+		
+	
+
+{% endblock %}

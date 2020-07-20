@@ -1,0 +1,19 @@
+
+{% extends 'base.html' %} {% load crispy_forms_tags %} {% block title %} Delete
+{% endblock title %} {% load static %} {% block content %}
+
+<h2>Create Group</h2>
+<div class="jumbotron jumbotron-fluid">
+  <div class="form-group">
+  	Delete Student ??
+    <form method="POST">
+      {% csrf_token %} 
+      <input
+        type="submit"
+        class="btn btn-warning btn-lg"
+        value="comfirm"
+      />
+    </form>
+  </div>
+</div>
+{% endblock %}
