@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>This is the index</title>
+    </head>   
+    <body>
+        <h1>{{musician.first_name}} {{musician.last_name}}</h1>
+        
+        <h3> Instrument :{{musician.instrument}}</h3>
+        <h1>Album : </h1>
+        {% for album in musician.album_list.all%}
+            <ul>
+                <li> {{album.name}}</li>
+                <li> {{album.release_date}}</li>
+            </ul>
+        {% endfor %}
+    </body>
+
+</html>

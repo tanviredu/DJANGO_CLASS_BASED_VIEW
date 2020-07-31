@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>This is the index</title>
+    </head>   
+    <body>
+        <ul>
+            {% for item in music_list %}
+                <li> <a href="{% url 'CLSBV:mdetail' item.id %}" >{{item.first_name}}   {{item.last_name}}</a></li>
+                <ul>
+                    <li>{{item.instrument}} </li>
+                    <li><a href="{% url 'CLSBV:updatem' item.id %}" >Update</a></li>
+                    <li><a href="{% url 'CLSBV:updatea' item.id %}" >Update Album</a></li>
+                    <li><a href="{% url 'CLSBV:deletem' item.id %}" >Delete M</a></li>
+                </ul>
+
+
+            {% endfor %}
+        </ul>
+    </body>
+
+</html>

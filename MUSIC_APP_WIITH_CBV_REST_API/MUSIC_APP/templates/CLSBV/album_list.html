@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>This is the Album List</title>
+    </head>   
+    <body>
+        <ul>
+            {% for item in albumlist %}
+                <li>{{item.artist}}  </li>
+                <ul>
+                    <li><a href="{%  url 'CLSBV:adetail' pk=item.pk %}">Album Name : {{item.name}} </a></li>
+                    <li>Album release_date : {{item.release_date}} </li>
+                    <li>Album stars : {{item.num_starts}} </li>
+                </ul>
+
+
+            {% endfor %}
+        </ul>
+    </body>
+
+</html>
