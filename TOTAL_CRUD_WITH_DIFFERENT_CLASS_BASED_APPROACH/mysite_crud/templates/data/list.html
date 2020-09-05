@@ -1,0 +1,18 @@
+<html>
+    <head>
+    </head>
+
+    <body>
+            {% for item in data_list %}
+                <hr>
+                Title: {{item.title}} <br>
+                description: {{item.description}}
+                <a href="{% url "data:update" item.id %}">Update</a>
+                <a href="{% url "data:delete" item.id %}">Delete</a>
+                <hr>
+            {% endfor %}
+
+    </body>
+
+
+</html>

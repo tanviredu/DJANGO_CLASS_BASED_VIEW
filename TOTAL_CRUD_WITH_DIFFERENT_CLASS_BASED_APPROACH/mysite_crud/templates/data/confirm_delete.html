@@ -1,0 +1,15 @@
+<html>
+    <head>
+    </head>
+
+    <body>
+        <p> Are you sure to delete : {{obj}}</p>
+           <form method="POST">
+                {% csrf_token %}
+            <input type="submit" value="create" name="submit">
+           </form>
+
+    </body>
+
+
+</html>
